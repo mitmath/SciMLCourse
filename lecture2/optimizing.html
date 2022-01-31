@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<meta http-equiv="refresh" content="1;url=https://github.com/SciML/SciMLBook" />
+
 <HTML lang = "en">
 <HEAD>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Optimizing Serial Code</title>
-  
+
 
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -16,7 +18,7 @@
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
 
-  
+
 <style>
 pre.hljl {
     border: 1px solid #ccc;
@@ -1290,7 +1292,7 @@ Body::UNION&#123;FLOAT64, INT64&#125;
 2 ── &#37;7  &#61; &#36;&#40;Expr&#40;:gc_preserve_begin, :&#40;&#37;2&#41;&#41;&#41;
 │    &#37;8  &#61; &#40;Base.getfield&#41;&#40;&#37;2, :state&#41;::Random.DSFMT.DSFMT_state
 │    &#37;9  &#61; &#40;Base.getfield&#41;&#40;&#37;2, :vals&#41;::Array&#123;Float64,1&#125;
-│    &#37;10 &#61; &#36;&#40;Expr&#40;:foreigncall, :&#40;:jl_array_ptr&#41;, Ptr&#123;Float64&#125;, svec&#40;Any&#41;, 
+│    &#37;10 &#61; &#36;&#40;Expr&#40;:foreigncall, :&#40;:jl_array_ptr&#41;, Ptr&#123;Float64&#125;, svec&#40;Any&#41;,
 :&#40;:ccall&#41;, 1, :&#40;&#37;9&#41;&#41;&#41;::Ptr&#123;Float64&#125;
 │    &#37;11 &#61; &#40;Base.getfield&#41;&#40;&#37;2, :vals&#41;::Array&#123;Float64,1&#125;
 │    &#37;12 &#61; &#40;Base.arraylen&#41;&#40;&#37;11&#41;::Int64
@@ -1496,7 +1498,7 @@ Possible fix, define
 <pre class="output">
 3-element Array&#123;Any,1&#125;:
   &quot;1.0&quot;
- 2     
+ 2
  2.0
 </pre>
 
@@ -1774,7 +1776,7 @@ Main.WeaveSandBox0.MyParameterizedComplex&#123;Float32&#125;
 ;  @ none:2 within &#96;g&#39;
 ; Function Attrs: uwtable
 define &#123; float, float &#125; @julia_g_15636&#40;&#123; float, float &#125; addrspace&#40;11&#41;* noca
-pture nonnull readonly dereferenceable&#40;8&#41;, &#123; float, float &#125; addrspace&#40;11&#41;* 
+pture nonnull readonly dereferenceable&#40;8&#41;, &#123; float, float &#125; addrspace&#40;11&#41;*
 nocapture nonnull readonly dereferenceable&#40;8&#41;&#41; #0 &#123;
 top:
 ;  @ none:4 within &#96;g&#39;
@@ -1818,7 +1820,7 @@ ace&#40;11&#41;* &#37;1, i64 0, i32 1
     &#37;13 &#61; fadd float &#37;11, &#37;12
 ; └└
   &#37;.fca.0.insert &#61; insertvalue &#123; float, float &#125; undef, float &#37;9, 0
-  &#37;.fca.1.insert &#61; insertvalue &#123; float, float &#125; &#37;.fca.0.insert, float &#37;13, 
+  &#37;.fca.1.insert &#61; insertvalue &#123; float, float &#125; &#37;.fca.0.insert, float &#37;13,
 1
   ret &#123; float, float &#125; &#37;.fca.1.insert
 &#125;
@@ -1908,7 +1910,7 @@ top:
   &#37;12 &#61; load &#37;jl_value_t**, &#37;jl_value_t*** &#37;9
   store &#37;jl_value_t** &#37;12, &#37;jl_value_t*** &#37;11
   &#37;13 &#61; bitcast &#37;jl_value_t*** &#37;9 to &#37;jl_value_t addrspace&#40;10&#41;***
-  store &#37;jl_value_t addrspace&#40;10&#41;** &#37;gcframe, &#37;jl_value_t addrspace&#40;10&#41;*** 
+  store &#37;jl_value_t addrspace&#40;10&#41;** &#37;gcframe, &#37;jl_value_t addrspace&#40;10&#41;***
 &#37;13
   &#37;14 &#61; load &#37;jl_value_t addrspace&#40;10&#41;*, &#37;jl_value_t addrspace&#40;10&#41;** &#37;1, al
 ign 8
@@ -1941,7 +1943,7 @@ l_value_t addrspace&#40;10&#41;* nonnull &#37;17&#41;
 &#41;** &#37;3, i32 1
    store &#37;jl_value_t addrspace&#40;10&#41;* &#37;16, &#37;jl_value_t addrspace&#40;10&#41;** &#37;22
    &#37;23 &#61; call nonnull &#37;jl_value_t addrspace&#40;10&#41;* @&quot;japi1_&#43;_15641&quot;&#40;&#37;jl_value
-_t addrspace&#40;10&#41;* addrspacecast &#40;&#37;jl_value_t* inttoptr &#40;i64 21697839088 to 
+_t addrspace&#40;10&#41;* addrspacecast &#40;&#37;jl_value_t* inttoptr &#40;i64 21697839088 to
 &#37;jl_value_t*&#41; to &#37;jl_value_t addrspace&#40;10&#41;*&#41;, &#37;jl_value_t addrspace&#40;10&#41;** &#37;
 3, i32 2&#41;
 ; └
@@ -2269,7 +2271,7 @@ ib.lr.ph.lr.ph.split.us:                          ; preds &#61; &#37;top
 lign 8
    &#37;13 &#61; getelementptr inbounds &#37;jl_value_t addrspace&#40;10&#41;*, &#37;jl_value_t add
 rspace&#40;10&#41;** &#37;1, i64 2
-   &#37;14 &#61; load &#37;jl_value_t addrspace&#40;10&#41;*, &#37;jl_value_t addrspace&#40;10&#41;** &#37;13, 
+   &#37;14 &#61; load &#37;jl_value_t addrspace&#40;10&#41;*, &#37;jl_value_t addrspace&#40;10&#41;** &#37;13,
 align 8
    &#37;15 &#61; getelementptr inbounds &#37;jl_value_t addrspace&#40;10&#41;*, &#37;jl_value_t add
 rspace&#40;10&#41;* addrspace&#40;11&#41;* &#37;7, i64 4
@@ -2425,14 +2427,14 @@ us.us
 L36:                                              ; preds &#61; &#37;L25.us
 ; └
 ;  @ none:4 within &#96;inner_noalloc&#33;&#39;
-  ret &#37;jl_value_t addrspace&#40;10&#41;* addrspacecast &#40;&#37;jl_value_t* inttoptr &#40;i64 
+  ret &#37;jl_value_t addrspace&#40;10&#41;* addrspacecast &#40;&#37;jl_value_t* inttoptr &#40;i64
 87752712 to &#37;jl_value_t*&#41; to &#37;jl_value_t addrspace&#40;10&#41;*&#41;
 
 oob:                                              ; preds &#61; &#37;ib.lr.ph.us, &#37;
 L24.us.us.us.us, &#37;top
   &#37;value_phi.lcssa &#61; phi i64 &#91; 1, &#37;top &#93;, &#91; &#37;value_phi30.us, &#37;L24.us.us.us.
 us &#93;, &#91; &#37;value_phi30.us, &#37;ib.lr.ph.us &#93;
-  &#37;value_phi2.lcssa &#61; phi i64 &#91; 1, &#37;top &#93;, &#91; &#37;63, &#37;L24.us.us.us.us &#93;, &#91; 1, 
+  &#37;value_phi2.lcssa &#61; phi i64 &#91; 1, &#37;top &#93;, &#91; &#37;63, &#37;L24.us.us.us.us &#93;, &#91; 1,
 &#37;ib.lr.ph.us &#93;
 ;  @ none:3 within &#96;inner_noalloc&#33;&#39;
 ; ┌ @ array.jl:730 within &#96;getindex&#39;
@@ -2707,7 +2709,7 @@ L5
   br i1 &#37;64, label &#37;L36, label &#37;L2
 
 L36:                                              ; preds &#61; &#37;L25
-  ret &#37;jl_value_t addrspace&#40;10&#41;* addrspacecast &#40;&#37;jl_value_t* inttoptr &#40;i64 
+  ret &#37;jl_value_t addrspace&#40;10&#41;* addrspacecast &#40;&#37;jl_value_t* inttoptr &#40;i64
 87752712 to &#37;jl_value_t*&#41; to &#37;jl_value_t addrspace&#40;10&#41;*&#41;
 &#125;
 </pre>
