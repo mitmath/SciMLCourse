@@ -205,7 +205,7 @@ where `map` is a function that just loops over the values element-wise.
 
 **Take a quick second to think about why loop fusion may be an optimization.**
 
-This about what would happen if you did not fuse the operations. We can write
+This is about what would happen if you did not fuse the operations. We can write
 that out as:
 
 ```julia
