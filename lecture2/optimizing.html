@@ -1039,7 +1039,7 @@ A&#91;1&#93; &#61; 2.0
 b &#61; 4
 a &#43; b</code></pre>
 <p>when the addition occurs, the Python interpreter will check the object holding the values and ask it for its types, and use those types to know how to compute the &#43; function. For this reason, the add function in Python is rather complex since it needs to decode and have a version for all primitive types&#33;</p>
-<p>Not only is there runtime overhead checks in function calls due to to not being explicit about types, there is also a memory overhead since it is impossible to know how much memory a value with take since that&#39;s a property of its type. Thus the Python interpreter cannot statically guerentee exact unchanging values for the size that a value would take in the stack, meaning that the variables are not stack-allocated. This means that every number ends up heap-allocated, which hopefully begins to explain why this is not as fast as C.</p>
+<p>Not only is there runtime overhead checks in function calls due to to not being explicit about types, there is also a memory overhead since it is impossible to know how much memory a value will take since that&#39;s a property of its type. Thus the Python interpreter cannot statically guerentee exact unchanging values for the size that a value would take in the stack, meaning that the variables are not stack-allocated. This means that every number ends up heap-allocated, which hopefully begins to explain why this is not as fast as C.</p>
 <p>The solution is Julia is somewhat of a hybrid. The Julia code looks like:</p>
 
 
